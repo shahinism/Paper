@@ -71,3 +71,28 @@ a.nav_link:focus{
     background: #ccc;
 }
 
+#navigation{
+    background: #1c1c1c;
+}
+#navigation li a{
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid #383838;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+}
+
+#navigation li:last-child a{
+    border-bottom: none;
+}
+
+#navigation li a:hover,
+#navigation li a:focus{
+    color: #1c1c1c;
+    background: #ccc
+}
