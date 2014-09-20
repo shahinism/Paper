@@ -1,0 +1,16 @@
+/* Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
