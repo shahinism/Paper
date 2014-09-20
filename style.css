@@ -13,8 +13,18 @@ body{
 
 }
 
-.clear{
+.clearfix:after{
+    content: "";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
     clear: both;
+}
+
+.clearfix{
+    zoom: 1;
 }
 
 .container{
