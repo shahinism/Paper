@@ -13,7 +13,8 @@ body{
 
 }
 
-.clearfix:after{
+.clearfix:after,
+.container:after{
     content: "";
     display: block;
     overflow: hidden;
@@ -23,7 +24,8 @@ body{
     clear: both;
 }
 
-.clearfix{
+.clearfix,
+.container{
     zoom: 1;
 }
 
