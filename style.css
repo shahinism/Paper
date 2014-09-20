@@ -14,3 +14,12 @@ body{
     width: 90%;
     margin: 0 auto;
 }
+
+.container columns{
+    float: left;
+}
+
+.container .columns.one { width: 25%; }
+.container .columns.two { width: 50%; }
+.container .columns.three { width: 75%; }
+.container .columns.four { width: 100%; }
