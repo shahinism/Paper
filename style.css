@@ -47,3 +47,27 @@ img{
 .container .columns.two { width: 50%; }
 .container .columns.three { width: 75%; }
 .container .columns.four { width: 100%; }
+
+a.nav_link{
+    float: right;
+    color: white;
+    background: #4e4e4e;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+a.nav_link:hover,
+a.nav_link:focus{
+    color: #1c1c1c;
+    background: #ccc;
+}
+
