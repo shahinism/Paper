@@ -130,6 +130,14 @@ a.nav-link:hover:before {
   font-family: "FontAwesome";
   color: #93a1a1; }
 
+.logo {
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 100%;
+  float: left;
+  margin-left: 10px; }
+
 /* Media queries */
 @media screen and (min-width: 500px) {
   .container {
