@@ -90,27 +90,30 @@ img{
 }
 
 /* Navigation bar */
-a.nav_link{
-    float: right;
-    color: $white;
+a.nav-link{
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: $base1;
     background: $base03;
-    border-top: 5px solid $base03;
-    text-decoration: none;
-    padding: 0 10px;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 22px;
+    padding: 5px;
+    font-size: 18px;
     height: 30px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    transition: all ease $anim-duration;
+    text-decoration: none;
 }
 
-a.nav_link:hover{
-    border-top: 5px solid $blue;
+a.nav-link:before{
+    transition: all ease $anim-duration;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    color: $base1;
+}
+
+a.nav-link:hover:before{
+    color: $base3;
 }
 
 #navigation{
@@ -129,7 +132,7 @@ a.nav_link:hover{
     display: block;
     padding: 0 20px;
     text-decoration: none;
-    color: $white;
+    color: $base1;
     font-weight: bold;
     border-bottom: 2px solid $base02;
     text-transform: uppercase;
@@ -145,16 +148,7 @@ a.nav_link:hover{
 
 #navigation li a:hover{
     border-left: 5px solid $blue;
-}
-
-.nav-icon{
-    color: $base03 !important;
-    width: 38px;
-}
-
-.nav-icon:hover{
-    width: 120px;
-    color: $base1 !important;
+    color: $base3;
 }
 
 .nav-icon.home:before{
@@ -180,6 +174,7 @@ a.nav_link:hover{
     font-family: "FontAwesome";
     color: $base1;
 }
+
 /* Media queries */
 @media screen and (min-width: 500px){
     .container{
@@ -193,7 +188,7 @@ a.nav_link:hover{
     .container .columns.four { width: 100%; }
 
     /* Navigation bar on bigger screens */
-    a.nav_link{
+    a.nav-link{
 	display: none;
     }
     #navigation{
@@ -206,11 +201,11 @@ a.nav_link:hover{
     }
 
     #navigation ul{
+	border-top: 5px solid $blue;
 	margin: 0;
     }
     
     #navigation li a{
-	border-top: 5px solid $base03;
 	height: 40px;
 	padding: 0 10px;
 	float: left;
@@ -218,19 +213,20 @@ a.nav_link:hover{
 	border-right: 2px solid $base02;
 	color: $base1;
     }
-
-    #navigation li a:hover{
-	border-left: 0 !important;
-	border-top: 5px solid $blue;
-	color: $base3;
-    }
     
     #navigation li:last-child a{
 	border-bottom: none;
     }
 
-    #navigation li a:hover{
-	border-left: 5px solid $blue;
+    .nav-icon{
+	color: $base03 !important;
+	width: 38px;
+    }
+
+    .nav-icon:hover{
+	border-left: 0 !important;
+	width: 120px;
+	color: $base3 !important;
     }
 
 }

@@ -58,26 +58,28 @@ img {
   padding: 10px; }
 
 /* Navigation bar */
-a.nav_link {
-  float: right;
-  color: white;
+a.nav-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #93a1a1;
   background: #002b36;
-  border-top: 5px solid #002b36;
-  text-decoration: none;
-  padding: 0 10px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 22px;
+  padding: 5px;
+  font-size: 18px;
   height: 30px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  transition: all ease 0.5s; }
+  text-decoration: none; }
 
-a.nav_link:hover {
-  border-top: 5px solid #268bd2; }
+a.nav-link:before {
+  transition: all ease 0.5s;
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  color: #93a1a1; }
+
+a.nav-link:hover:before {
+  color: #fdf6e3; }
 
 #navigation {
   background: #002b36; }
@@ -92,7 +94,7 @@ a.nav_link:hover {
   display: block;
   padding: 0 20px;
   text-decoration: none;
-  color: white;
+  color: #93a1a1;
   font-weight: bold;
   border-bottom: 2px solid #073642;
   text-transform: uppercase;
@@ -105,15 +107,8 @@ a.nav_link:hover {
   border-bottom: none; }
 
 #navigation li a:hover {
-  border-left: 5px solid #268bd2; }
-
-.nav-icon {
-  color: #002b36 !important;
-  width: 38px; }
-
-.nav-icon:hover {
-  width: 120px;
-  color: #93a1a1 !important; }
+  border-left: 5px solid #268bd2;
+  color: #fdf6e3; }
 
 .nav-icon.home:before {
   content: "\f015";
@@ -154,7 +149,7 @@ a.nav_link:hover {
     width: 100%; }
 
   /* Navigation bar on bigger screens */
-  a.nav_link {
+  a.nav-link {
     display: none; }
 
   #navigation {
@@ -166,10 +161,10 @@ a.nav_link:hover {
     height: 40px; }
 
   #navigation ul {
+    border-top: 5px solid #268bd2;
     margin: 0; }
 
   #navigation li a {
-    border-top: 5px solid #002b36;
     height: 40px;
     padding: 0 10px;
     float: left;
@@ -177,13 +172,14 @@ a.nav_link:hover {
     border-right: 2px solid #073642;
     color: #93a1a1; }
 
-  #navigation li a:hover {
-    border-left: 0 !important;
-    border-top: 5px solid #268bd2;
-    color: #fdf6e3; }
-
   #navigation li:last-child a {
     border-bottom: none; }
 
-  #navigation li a:hover {
-    border-left: 5px solid #268bd2; } }
+  .nav-icon {
+    color: #002b36 !important;
+    width: 38px; }
+
+  .nav-icon:hover {
+    border-left: 0 !important;
+    width: 120px;
+    color: #fdf6e3 !important; } }
