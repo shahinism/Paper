@@ -52,6 +52,7 @@ body{
     text-align: justify;
     color: $base01;
     font-size: 100/1.5em;
+    margin-bottom: 40px;
 }
 
 img{
@@ -80,7 +81,7 @@ img{
     zoom: 1;
 }
 
-.container columns{
+.container .columns{
     float: left;
 }
 
@@ -122,6 +123,7 @@ a.nav-link:hover:before{
 #navigation{
     border-top: 5px solid $blue;
     background: $base03;
+    clear: both;
 }
 
 #navigation ul{
@@ -230,6 +232,10 @@ span.writer:before{
     .container{
 	width: 70%;
 	margin: 0 auto;
+    }
+
+    footer .container{
+	width: 100%;
     }
 
     .container .columns.one { width: 25%; }
