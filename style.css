@@ -23,7 +23,8 @@ body {
   background-color: #fdf6e3;
   font-family: "Raleway", sans-serif;
   text-align: justify;
-  color: #586e75; }
+  color: #586e75;
+  font-size: 100/1.5em; }
 
 img {
   max-width: 100%;
@@ -131,6 +132,22 @@ a.nav-link:hover:before {
   font-family: "FontAwesome";
   color: #93a1a1; }
 
+/* Metadata */
+.metadata {
+  font-size: .8em;
+  color: #949494; }
+
+span.date:before {
+  content: "\f073";
+  font-family: "FontAwesome";
+  padding-right: 5px; }
+
+span.writer:before {
+  content: "\f040";
+  font-family: "FontAwesome";
+  padding-right: 5px; }
+
+/* Logo */
 .logo {
   background-image: url("images/logo.png");
   background-repeat: no-repeat;
@@ -192,3 +209,12 @@ a.nav-link:hover:before {
     border-left: 0 !important;
     width: 120px;
     color: #fdf6e3 !important; } }
+@media only screen and (min-width: 900px) {
+  /* Metadata in big screens */
+  .metadata {
+    position: absolute;
+    left: 10px; }
+
+  .metadata span {
+    display: block;
+    width: 100%; } }
