@@ -52,12 +52,16 @@ body{
     text-align: justify;
     color: $base01;
     font-size: 100/1.5em;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 img{
     max-width: 100%;
     max-height: auto;
+}
+
+.center{
+    text-align: center;
 }
 
 .container{
@@ -222,6 +226,137 @@ span.writer:before{
     margin: 0 auto;
     height: 40px;
 }
+
+/* Footer */
+footer.container{
+    border-top: 5px solid $red;
+    Background-color: $base03;
+}
+
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer p{
+    color: $base1;
+}
+
+.social{
+    color: $base0;
+    text-decoration: none;
+    font-family: "FontAwesome";
+    padding-right: 10px;
+    font-size: 2em;
+}
+
+.social.github:before{
+    transition: all ease $anim-duration;
+    content:"\f113";
+}
+
+.social.github:hover:before{
+    color: $white;
+}
+
+.social.twitter:before{
+    transition: all ease $anim-duration;
+    content:"\f099";
+}
+
+.social.twitter:hover:before{
+    color: $blue;
+}
+
+.social.lastfm:before{
+    transition: all ease $anim-duration;
+    content:"\f202";
+}
+
+.social.lastfm:hover:before{
+    color: $red;
+}
+
+.social.reddit:before{
+    transition: all ease $anim-duration;
+    content:"\f1a1";
+}
+
+.social.reddit:hover:before{
+    color: $white;
+}
+
+li.project a{
+    color: $base1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all ease $anim-duration;
+}
+
+li.project a:hover{
+    color: $white;
+}
+
+li.project:before{
+    content:"\f0ad";
+    font-family: "FontAwesome";
+    color: $red;
+    padding-right: 5px;
+}
+
+.last-tweet{
+    transition: all ease $anim-duration;
+    opacity: .5;
+    background-color: #acded6;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.last-tweet:hover{
+    opacity: 1;
+}
+
+.last-tweet p{
+    color: black;
+}
+
+.last-tweet p:before{
+    content: "\f099";
+    font-family: "FontAwesome";
+    padding: 0 5px;
+}
+
+.lastfm-status{
+    transition: all ease $anim-duration;
+    opacity: .5;
+    background-color: #df1b23;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.lastfm-status:hover{
+    opacity: 1;
+}
+
+.lastfm-status p{
+    color: black;
+}
+
+.lastfm-status p:before{
+    content: "\f202";
+    font-family: "FontAwesome";
+    padding: 0 5px
+}
 /* Media queries */
 @media only screen and (min-width: 320px){
     .metadata{
@@ -234,7 +369,7 @@ span.writer:before{
 	margin: 0 auto;
     }
 
-    footer .container{
+    footer.container{
 	width: 100%;
     }
 
@@ -259,7 +394,7 @@ span.writer:before{
 	left: 0;
 	width: 100%;
 	margin: 0;
-	height: 40px;
+	height: 45px;
     }
 
     #navigation ul{
@@ -268,7 +403,7 @@ span.writer:before{
     
     #navigation li a{
 	height: 40px;
-	padding: 0 10px;
+	padding: 5px 10px;
 	float: left;
 	border-bottom: 0;
 	border-right: 2px solid $base02;
