@@ -22,8 +22,9 @@ $gray-light: #e1e1e1;
 $anim-duration: .5s;
 $font-family: 'Raleway', sans-serif;
 /* Style imports */
-@import url('queryreporter.css');
+/* @import url('queryreporter.css'); */
 @import url('normalize.css');
+@import url('code.css');
 
 /* Font import */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
