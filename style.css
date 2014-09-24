@@ -20,6 +20,9 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
+small {
+  font-size: .5em; }
+
 body {
   background-color: #fdf6e3;
   font-family: "Raleway", sans-serif;
@@ -62,6 +65,22 @@ img {
 .container .columns.four {
   width: 100%;
   padding: 10px; }
+
+/* Header */
+header p {
+  background-color: #002b36;
+  border-radius: 0 0 10px 10px;
+  color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 0 0 5px white;
+  text-transform: uppercase;
+  width: 80%; }
+
+header a {
+  color: white;
+  text-decoration: none; }
 
 /* Navigation bar */
 a.nav-link {
