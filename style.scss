@@ -17,6 +17,7 @@ $cyan:      #2aa198;
 $green:     #859900;
 $white:     #ffffff;
 $gray:      #949494;
+$gray-light: #e1e1e1;
 /* Variables */
 $anim-duration: .5s;
 $font-family: 'Raleway', sans-serif;
@@ -118,11 +119,13 @@ a.nav-link:hover:before{
 }
 
 #navigation{
+    border-top: 5px solid $blue;
     background: $base03;
 }
 
 #navigation ul{
     padding: 0;
+    margin: 0;
 }
 
 #navigation li{
@@ -176,11 +179,24 @@ a.nav-link:hover:before{
     font-family: "FontAwesome";
     color: $base1;
 }
-
+/* Article */
+article h2{
+    text-align: center;
+    border-top: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+    padding: 10px;
+    margin-bottom: 0;
+}
 /* Metadata */
-.metadata{
-    font-size: .8em;
+.metadata {
+    background-color: $gray-light;
+    border-radius: 0 0 5px 5px;
     color: $gray;
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
 }
 
 span.date:before{
@@ -200,12 +216,16 @@ span.writer:before{
     background-image: url("images/logo.png");
     background-repeat: no-repeat;
     width: 70px;
-    height: 100%;
-    float: left;
-    margin-left: 10px;
+    margin: 0 auto;
+    height: 40px;
 }
 /* Media queries */
-@media screen and (min-width: 500px){
+@media only screen and (min-width: 320px){
+    .metadata{
+	width: 300px;
+    }
+}
+@media only screen and (min-width: 500px){
     .container{
 	width: 70%;
 	margin: 0 auto;
@@ -216,6 +236,12 @@ span.writer:before{
     .container .columns.three { width: 75%; }
     .container .columns.four { width: 100%; }
 
+    /* Logo in bigger screen */
+    .logo{
+	float: left;
+	height: 100%;
+	margin-left: 10px;
+    }
     /* Navigation bar on bigger screens */
     a.nav-link{
 	display: none;
@@ -230,7 +256,6 @@ span.writer:before{
     }
 
     #navigation ul{
-	border-top: 5px solid $blue;
 	margin: 0;
     }
     
@@ -257,17 +282,4 @@ span.writer:before{
 	width: 120px;
 	color: $base3 !important;
     }
-}
-
-@media only screen and (min-width: 900px){
-    /* Metadata in big screens */
-    .metadata {
-	position: absolute;
-	left: 10px;
-    }
-
-    .metadata span{
-	display: block;
-	width: 100%    }
-
 }
