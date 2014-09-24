@@ -220,6 +220,10 @@ footer.container {
   border-top: 5px solid #dc322f;
   Background-color: #002b36; }
 
+footer a {
+  transition: all ease 0.5s;
+  position: static; }
+
 footer ul {
   padding: 0;
   margin: 0; }
@@ -283,16 +287,12 @@ li.project:before {
 
 .last-tweet {
   transition: all ease 0.5s;
-  opacity: .5;
   background-color: #acded6;
   width: 100%;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 10px; }
-
-.last-tweet:hover {
-  opacity: 1; }
 
 .last-tweet p {
   color: black; }
@@ -304,16 +304,12 @@ li.project:before {
 
 .lastfm-status {
   transition: all ease 0.5s;
-  opacity: .5;
   background-color: #df1b23;
   width: 100%;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 10px; }
-
-.lastfm-status:hover {
-  opacity: 1; }
 
 .lastfm-status p {
   color: black; }
