@@ -20,8 +20,24 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-small {
-  font-size: .5em; }
+a {
+  position: relative;
+  text-decoration: none;
+  color: #d33682; }
+
+a:after {
+  content: "";
+  position: absolute;
+  bottom: -.1em;
+  background: #d33682;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  transition: all ease 0.5s; }
+
+a:hover:after {
+  left: 0;
+  right: 0; }
 
 body {
   background-color: #fdf6e3;
@@ -34,6 +50,9 @@ body {
 img {
   max-width: 100%;
   max-height: auto; }
+
+small {
+  font-size: .5em; }
 
 .center {
   text-align: center; }
@@ -80,7 +99,7 @@ header p {
 
 header a {
   color: white;
-  text-decoration: none; }
+  font-weight: bold; }
 
 /* Navigation bar */
 a.nav-link {
@@ -246,11 +265,12 @@ footer p {
 .social.reddit:hover:before {
   color: white; }
 
+li.project {
+  margin-bottom: 5px; }
+
 li.project a {
   color: #93a1a1;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all ease 0.5s; }
+  font-weight: bold; }
 
 li.project a:hover {
   color: white; }

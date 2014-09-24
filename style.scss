@@ -46,8 +46,26 @@ $font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
-small{
-    font-size: .5em;
+a{
+    position: relative;
+    text-decoration: none;
+    color: $magenta;
+}
+
+a:after{
+    content:"";
+    position: absolute;
+    bottom: -.1em;
+    background:$magenta;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    transition: all ease $anim-duration;
+}
+
+a:hover:after{
+    left: 0;
+    right: 0;
 }
 
 body{
@@ -62,6 +80,10 @@ body{
 img{
     max-width: 100%;
     max-height: auto;
+}
+
+small{
+    font-size: .5em;
 }
 
 .center{
@@ -116,7 +138,7 @@ header p {
 
 header a{
     color: $white;
-    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Navigation bar */
@@ -312,11 +334,13 @@ footer p{
     color: $white;
 }
 
+li.project{
+    margin-bottom: 5px;
+}
+
 li.project a{
     color: $base1;
     font-weight: bold;
-    text-decoration: none;
-    transition: all ease $anim-duration;
 }
 
 li.project a:hover{
