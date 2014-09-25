@@ -282,6 +282,10 @@ footer a{
     position: static;
 }
 
+footer a:after{
+    display: none;
+}
+
 footer ul{
     padding: 0;
     margin: 0;

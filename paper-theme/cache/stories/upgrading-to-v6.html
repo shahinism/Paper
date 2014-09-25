@@ -1,0 +1,67 @@
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Version:</th>
+<td>6.2.1</td></tr>
+</tbody>
+</table>
+<p>Nikola tries fairly hard to be compatible between versions. However, there were
+a few areas which were getting clunky, and needed fxing. So, here's what you may
+need to change in your site.</p>
+<p>If you need to change anything else, or something breaks, please write at nikola-discuss
+and I'll add further tweaks here.</p>
+<div class="section" id="themes">
+<h2>Themes</h2>
+<dl class="docutils">
+<dt><strong>NOTE</strong></dt>
+<dd>The install_theme command is not working yet, get themes from <a class="reference external" href="https://github.com/getnikola/nikola-themes">https://github.com/getnikola/nikola-themes</a></dd>
+<dt><strong>NOTE</strong></dt>
+<dd>There is no equivalent for the jinja-default theme yet. If you have a custom,
+jinja-based theme, upgrading is probably a bad idea right now.</dd>
+</dl>
+<p>Themes have been renamed:</p>
+<ul class="simple">
+<li>site =&gt; bootstrap</li>
+<li>orphan =&gt; base</li>
+</ul>
+<p>Theme added:</p>
+<ul class="simple">
+<li>base-jinja</li>
+</ul>
+<p>Themes have been moved out of nikola and into nikola-themes:</p>
+<ul class="simple">
+<li>default =&gt; oldfashioned at nikola-themes</li>
+<li>jinja-default =&gt; not there yet, coming soon</li>
+<li>monospace =&gt; monospace at nikola-themes</li>
+<li>site-reveal =&gt; reveal at nikola-themes</li>
+</ul>
+<p>You may have to change your <tt class="docutils literal">THEME</tt> setting, or change the <tt class="docutils literal">parent</tt> if you are
+using a custom theme. Also, some templates have been tweaked, but nothing should
+break for you.</p>
+<p>Facebook comments support changed the HTML tag to:</p>
+<!-- code-block: html
+
+<html% if comment_system == 'facebook': xmlns:fb="http://ogp.me/ns/fb#"
+%endif lang="${lang}"> -->
+<div class="section" id="comments">
+<h3>Comments</h3>
+<p>If you want a custom theme to support comment systems other than disqus, you will need to:</p>
+<ol class="arabic simple">
+<li>Replace mentions of disqus_helper.tmpl with comments_helper.tmpl</li>
+<li>Replace mentions of html_disqus with comment_form</li>
+<li>Replace mentions of html_disqus_link with comment_link</li>
+<li>Replace mentions of html_disqus_script with comment_link_script</li>
+</ol>
+<p>If you don't, your theme should work just fine, but support only disqus comments.</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration</h2>
+<p>A number of options have been renamed. In all cases, the behaviour should be <strong>exactly</strong> as
+before. If it's not, let me know. Also, you will get warnings. That doesn't mean things
+broke. They are there to inform you of what's happening, and that you need to tweak
+your config.</p>
+<p>All the deprecated options will work during the v6 cycle, and only be removed in v7, when
+those warnings will become errors.</p>
+</div>

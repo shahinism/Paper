@@ -224,6 +224,9 @@ footer a {
   transition: all ease 0.5s;
   position: static; }
 
+footer a:after {
+  display: none; }
+
 footer ul {
   padding: 0;
   margin: 0; }

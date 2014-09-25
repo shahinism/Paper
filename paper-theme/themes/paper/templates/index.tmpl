@@ -1,0 +1,23 @@
+{% import "index_helper.tmpl" as helper with context %}
+{% import "disqus_helper.tmpl" as disqus with context %}
+{% extends "base.tmpl" %}
+{% block content %}
+  {% for post in posts %}
+    <article>
+      <h2><a href="{{ post.permalink() }}">{{ post.title() }}</a></h2>
+      <div class="metadata">
+	<span class="date">{{ post.formatted_date(date_format) }}</span>
+	<span class="writer">Shahin Azad</span>
+      </div><!--/metadata-->
+      <p>
+	{{ post.text(teaser_only=index_teasers) }}
+      </p>
+      {% if not post.meta('nocomments') %}
+        {{ disqus.html_disqus_link(post.permalink()+"#disqus_thread", post.base_path) }}
+    </article>
+  {% endif %}
+{% endfor %}
+{{ helper.html_pager() }}
+{{ disqus.html_disqus_script() }}
+{% endblock %}
+
