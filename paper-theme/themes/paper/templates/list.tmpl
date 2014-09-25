@@ -1,19 +1,13 @@
 {% extends "base.tmpl" %}
 {% block content %}
-<!--Body content-->
-<div id="coreContent">
-  <div id="links" class="single hentry">
-    <div class="postContent">
-      <h2 class="entry-title">{{ title }}</h2>
-      <div class="entry-content">
-        <ul class="linkList">
-          {% for text, link in items %}
+  <article>
+    <h2>{{ title }}</h2>
+    <div class="entry-content">
+      <ul class="linkList">
+        {% for text, link in items %}
           <li><a href="{{ link }}">{{ text }}</a>
-          {% endfor %}
-        </ul>
-      </div>
+        {% endfor %}
+      </ul>
     </div>
-  </div>
-</div>
-<!--End of body content-->
+  </article>
 {% endblock %}

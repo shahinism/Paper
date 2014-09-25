@@ -21,13 +21,9 @@
     <nav id="navigation">
       <div class="logo"></div>
       <ul>
-	<li><a class="nav-icon home" href="#">Home</a></li>
-	<li><a class="nav-icon archive" href="#">Archive</i></a></li>
-<li><a class="nav-icon aboutme" href="#">About</i></a></li>
-<li><a class="nav-icon resume" href="#">Resume</i></a></li>
-
-</ul><!--/ul-->
-</nav><!--/navigation-->
+	{{ base_helper.html_sidebar_links() }}
+      </ul><!--/ul-->
+    </nav><!--/navigation-->
 
 </div><!--/container-->
 <footer class="container">

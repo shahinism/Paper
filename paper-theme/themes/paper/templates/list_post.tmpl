@@ -1,16 +1,12 @@
 {% extends "base.tmpl" %}
 {% block content %}
-<!--Body content-->
-<div id="coreContent">
-  <div id="archives" class="single hentry">
-      <h2 class="entry-title">{{ title }}</h2>
-      <ul id="recentPosts">
-        {% for post in posts %}
+  <article>
+    <h2>{{ title }}</h2>
+    <ul id="recentPosts">
+      {% for post in posts %}
         <li><a href="{{ post.permalink() }}">{{ post.title() }}</a>
           <div class="postDate"><abbr class="published">{{ post.formatted_date(date_format) }}</abbr></div>
         {% endfor %}
-      </ul>
-  </div>
-</div>
-<!--End of body content-->
+    </ul>
+  </article>
 {% endblock %}

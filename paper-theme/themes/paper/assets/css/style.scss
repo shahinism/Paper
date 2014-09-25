@@ -415,6 +415,11 @@ li.project:before{
 	border-right: 2px solid $base02;
 	color: $base1;
     }
+
+    #navigation li a:hover{
+	border-left: 0;
+	color: $base3;
+    }
     
     #navigation li:last-child a{
 	border-bottom: none;

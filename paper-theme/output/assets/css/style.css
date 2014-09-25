@@ -341,6 +341,10 @@ li.project:before {
     border-right: 2px solid #073642;
     color: #93a1a1; }
 
+  #navigation li a:hover {
+    border-left: 0;
+    color: #fdf6e3; }
+
   #navigation li:last-child a {
     border-bottom: none; }
 
