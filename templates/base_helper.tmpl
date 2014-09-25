@@ -1,0 +1,38 @@
+{% macro html_head() %}
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{ description }}"/>
+  <meta name="author" content="{{ blog_author }}"/>
+  <title>{{ title }} | {{ blog_title }}</title>
+  {{ mathjax_config }}
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen"/>
+  {% if has_custom_css %}
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
+  {% endif %}
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+      <![endif]-->
+
+  {% if rss_link %}
+    {{ rss_link }}
+  {% else %}
+    {% for language in translations %}
+      <link rel="alternate" type="application/rss+xml" title="RSS {{ language }}" href={{ _link('rss', None, language) }}/>
+    {% endfor %}
+  {% endif %}
+  {% if favicons %}
+    {% for name, file, size in favicons %}
+      <link rel="{{ name }}" href="{{ file }}" sizes="{{ size }}"/>
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
+
+{% macro html_sidebar_links() %}
+  {% for url, text in sidebar_links[lang] %}
+    {% if text == "Home" or text == "Archives" or text == "About" or text == "Resume" or text == "Tags" or text == "RSS"%}
+      <li><a class="nav-icon {{ text | lower}}" href="{{ url }}">{{ text }}</a></li>
+    {% else %}
+      <li><a href="{{ url }}">{{ text }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
